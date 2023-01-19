@@ -1,0 +1,314 @@
+/* Generales */
+body{
+  background-color: #1f7a8c;
+  margin:0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: auto;
+  min-height: 100vh;
+}
+
+footer, header{
+  text-align: center;
+  font-style: italic;
+  background-color: #022b3a;
+  color: #bfdbf7;
+  position: relative;
+  width: 100%;
+  min-height: 10vh;
+}
+
+header{
+  display: flex;
+  flex-grow: 1;
+  font-style:normal;
+  font-size: 1.1em;
+}
+
+footer{
+  flex-grow: 1;
+}
+
+hr{
+  width: 100%;
+  background-color:#e1e5f2;
+  margin: 0;
+}
+
+h1{
+  width: 60%;
+}
+.header-container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+}
+/* alura */
+.alura{
+  width: 20%;
+  display: flex;
+  max-height: 60px;
+  opacity:0.5 ;
+}
+
+/* Container principal*/
+
+.container{
+  margin: 2em 10%;
+  background-color: #1f7a8c;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+  min-height: 50vh;
+  align-items: center;
+  flex-grow: 1;
+}
+
+/* Columnas */
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1em;
+  border: 1px solid #1f7a8c;
+  box-shadow: inset 1em 1em 3em #bfdbf7;
+  color: #bfdbf7;
+  border-radius: 10% / 10%;
+  justify-content: center;
+  align-self: stretch;
+  min-height: 80%;
+}
+
+.col-input{
+  flex: 2;
+  border-radius: 5%/10%;
+  flex-wrap: wrap;
+  flex-direction:column;
+  align-items: center;
+}
+
+.col-result{
+  flex: 1;
+}
+
+/* Interior columnas */
+
+/* Input textarea*/
+textarea{
+
+  background-color: transparent;
+  outline: none;
+  resize: none;
+  border: none;
+}
+
+.ingresos-textarea{
+  height: 200px;
+}
+
+.ingresos{
+  height: 90%;
+}
+
+.mostrar{
+  height: 40%;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+.mostrar::placeholder{
+  visibility: hidden;
+}
+
+.ingresos::placeholder {
+  color: black;
+}
+
+/* Container de resultados */
+.resultados {
+  width: 100%;
+  height: 90%;
+  background-color: transparent;
+  font-size: 0.8rem;
+  border-radius: 10% / 10%;
+  flex: 0 0 100%;
+}
+
+/* Container mensajes */
+.mensaje-contenedor{
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.copiar {
+  visibility: hidden;
+}
+
+/* Mensaje ingresos */
+.infoChar{
+  margin-bottom: 5px;
+  flex-wrap: wrap;
+  font-size: 0.9em;
+  width: fit-content;
+  height: 1.1em;
+}
+
+
+/* Mensaje resultados */
+.info{
+  margin: 0;
+  flex-wrap: wrap;
+  text-align: center;
+  font-size: 1em;
+  color: #02222d;
+}
+
+.infoMsg{
+  visibility: visible;
+  width: 100%;
+}
+
+.no-visible{
+  display: none;
+}
+
+.visible{
+  display: flex;
+}
+
+/* Botones */
+
+.botones{
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  width: 70%;
+  display: flex;
+  margin: auto;
+}
+
+.boton {
+  border: 1px solid rgb(1, 90, 1);
+  border-radius: 10% / 25%;
+  background-color: #034d68;  
+  font-size: 1em;
+  width: 7rem;
+  height: 2.6rem;
+  cursor: pointer;
+  color: #bfdbf7;
+  box-shadow: 0 3px 5px #022b3a;
+
+}
+
+.boton:hover {
+  background-color: #1f7a8c;
+  box-shadow: inset 1em 1em 50px #bfdbf7;
+}
+
+/* Iconos */
+
+.imagenes{
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  width: 100%;
+  visibility: hidden;
+}
+
+.image-icon{
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+}
+
+#logo-info{
+  height: 0.8rem;
+  width: 0.8rem;
+}
+
+
+/* Animation */
+
+#copiar:hover {
+  animation: pulse 1s infinite ease-in-out alternate;
+}
+@keyframes pulse {
+  from { transform: scale(0.8); }
+  to { transform: scale(1.2); }
+}
+
+#eliminar:hover {
+  animation: pulse 1s infinite ease-in-out alternate;
+}
+@keyframes pulse {
+  from { transform: scale(0.8); }
+  to { transform: scale(1.2); }
+}
+
+
+/* Responsive */
+
+@media screen and (max-width:768px) {
+  .container, .columns{
+    display:flex;
+    border-radius: 10%/10%;
+  }
+  .container{
+    gap: 20px;
+  }
+  .columns{
+    max-width: 90%;
+    max-height: 80%;
+  }
+  
+  .info{
+    font-size: 0.8em;
+  }
+  .boton{
+    height: 2em;
+    width: fit-content;
+    margin: 0.4em
+  }
+  .ingresos{
+    max-width: 80vw;
+  }
+  .ingresos-textarea{
+    height: 20vh;
+  }
+  .mostrar{
+    max-width: 80vw;
+    height: 10vh;
+  }
+}
+
+@media screen and (max-width: 486px) {
+  html, body{
+    font-size: small;
+  }
+  .boton{
+    height: 1.5em;
+    width: fit-content;
+    margin: 0.4em
+  }
+  .info{
+    font-size: 0.9em;
+  }
+  .infoChar{
+    font-size: 0.7em;
+    margin-bottom: 25px;
+  }
+  footer{
+    flex-grow: 1;
+  }
+  .botones{
+    flex-direction: column;
+  }
+}

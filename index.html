@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EncriptadorJS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-container"><img class='alura' src="./imagenes/alura.svg"/>
+      <h1 class="titulo">Encriptador JS</h1>
+    </div>
+    
+  </header>
+  <hr>
+  <div id="erroneo"></div>
+  <!-- Container principal -->
+  <div class="container">
+    <!-- Columna input -->
+      <div class="columns col-input">
+        <!-- Input a descifrar -->
+        <div class="ingresos-textarea ">
+          <textarea oninput="ingreso()" class="ingresos" id='ingresos' rows = "5" cols = "60" placeholder="Ingrese el texto aqui"></textarea>
+        </div>
+        <!-- info Caracteres -->
+        <p class="infoChar" id="infoChar"><img src="./imagenes/info1.svg" id="logo-info">Solo letras minusculas. (Ningun otro caracter, ej. numeros, acentos)</p>
+
+        <!-- Botones encriptar -->
+        <div class="botones">
+          <button onclick="encriptarReplace(true)" class='boton' id="encriptar">Encriptar!</button>
+          <button onclick="encriptarReplace(false)" class='boton' id="desencriptar">Desencriptar!</button>
+        </div>
+      </div>
+    <!-- Columna resultados -->
+      <div class="columns col-result">      
+        <!-- Mensaje descifrado -->
+        <textarea class="mostrar" id="mostrar" rows="5" cols="60" placeholder='No se encontraron mensajes descifrados' readonly></textarea>
+        <!-- Texto sin mensaje -->
+        <div class='infoMsg' id="infoMsg">
+          <h3 class="info">Ningun mensaje encontrado</h3>
+          <p class="info correcto" visible>Ingresa el mensaje que quieres encriptar o desencriptar</p>
+        </div>  
+        <!-- Boton copiar -->
+        <!-- <button onclick="copiar()" class="boton copiar" id="copiar">Copiar</button> -->
+        <!-- iconos -->
+        <div class="imagenes" id="imagenes">
+          <img onclick="copiar()" id='copiar' class='image-icon' src="./imagenes/copyColor.svg">
+          <img onclick="eliminar()" id='eliminar' class='image-icon' src="./imagenes/delete.svg">
+        </div>
+      </div>
+  </div>
+  <hr>
+  <footer><p class="footer-copy">Creado por Sato &#169 | Alura ONE challenge</p></footer>
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
+
+
